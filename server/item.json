@@ -1,0 +1,40 @@
+[
+    {
+        "id": "1",
+        "name": "Toothbrush",
+        "price": 12.99
+    },
+    {
+        "id": "2",
+        "name": "Portable Fan",
+        "price": 5.30
+    },
+    {
+        "id": "4",
+        "name": "Toothbrush",
+        "price": 12.99
+    },
+    {
+        "id": "3",
+        "name": "Mechanical Keyboard (Chroma Edition)",
+        "price": 299.99
+    },    {
+        "id": "5",
+        "name": "Golf Cap (L)",
+        "price": 27.60
+    },
+    {
+        "id": "6",
+        "name": "Laptop Charge (USB-C)",
+        "price": 25.90
+    },    {
+        "id": "7",
+        "name": "Panchinko Ball",
+        "price": 2.00
+    },
+    {
+        "id": "8",
+        "name": "Fish Sushi Stick",
+        "price": 11.99
+    }
+]

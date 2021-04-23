@@ -1,0 +1,50 @@
+syntax="proto3";
+
+package item;
+
+option go_package = "./itempb";
+
+message Item {
+
+    string Id = 1;
+    string Name = 2;
+    float Price = 3;
+}
+
+message Cart {
+    
+    string User = 1;
+
+    repeated Item List = 2;
+
+    string Id = 3;
+}
+
+message User {
+    string Id = 1;
+    string Name = 2;
+}
+
+message ReportSummary {
+    string Id = 1;
+    string Message = 2; 
+}
+
+service CartManagement {
+    // Unary (db.FindOne | R )
+    rpc retrieve(Item) returns (Item);
+
+    // Server-streaming
+    rpc list(Item) returns (stream Item);
+
+    // Client-streaming (db.InsertOne | C )
+    rpc add(stream Item) returns (ReportSummary);
+
+    // Bidi-streaming
+    rpc getCart(stream User) returns (stream Item);
+
+    // .. more features ..(db.Remove | D )
+    rpc delete(Item) returns (ReportSummary);
+
+    // add and "UPDATE"
+}
